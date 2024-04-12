@@ -1,0 +1,125 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medication Reminder</title>
+    <link rel="shortcut icon" href="favIcon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1>Medication Reminder</h1>
+        <h1 class="time" id="currentTime"> -->
+<!-- Time will be displayed here -->
+<!-- </h1>
+    </header>
+    <main>
+        <section id="add-reminder">
+            <h2>Add Reminder</h2>
+            <form id="medication-form">
+                <div>
+                    <label for="medicine-name">Medication Name :</label>
+                    <input type="text" id="medicine-name" required>
+                </div>
+                <div>
+                    <label for="dosage">Dosage :</label>
+                    <input type="text" id="dosage" required>
+                </div> -->
+<!-- <div>
+                    <label for="time">Time of Intake :</label>
+                    <input type="time" id="time" required>
+                </div>
+                <button type="submit">Add Reminder</button>
+            </form>
+        </section>
+        <section id="reminder-list">
+            <h2>Medication Reminders</h2>
+            <ul id="reminders"> -->
+<!-- Medication reminders will be dynamically added here -->
+<!-- </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Medication Reminder App</p>
+    </footer> -->
+
+<!-- Script JS -->
+<!-- <script src="./script.js"></script> -->
+
+<!-- </body> -->
+<!-- </html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medication Reminder</title>
+    <link rel="shortcut icon" href="favIcon.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Medication Reminder</h1>
+      <h1 class="time" id="currentTime">
+        <!-- Time will be displayed here -->
+      </h1>
+    </header>
+    <main>
+      <section id="add-reminder">
+        <h2>Add Reminder</h2>
+        <form id="medication-form">
+          <div>
+            <label for="medicine-name">Medication Name :</label>
+            <input type="text" id="medicine-name" required />
+          </div>
+          <div>
+            <label for="dosage">Dosage :</label>
+            <input type="text" id="dosage" required />
+          </div>
+          <div>
+            <label for="time">Time of Intake :</label>
+            <input type="time" id="time" required />
+          </div>
+          <button type="submit">Add Reminder</button>
+        </form>
+      </section>
+      <section id="reminder-list">
+        <h2>Medication Reminders</h2>
+        <ul id="reminders">
+          <!-- Medication reminders will be dynamically added here -->
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Medication Reminder App</p>
+    </footer>
+
+    <!-- Modal for editing -->
+    <div id="editModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Edit Reminder</h2>
+        <form id="edit-medication-form">
+          <div>
+            <label for="edit-medicine-name">Medication Name :</label>
+            <input type="text" id="edit-medicine-name" required />
+          </div>
+          <div>
+            <label for="edit-dosage">Dosage :</label>
+            <input type="text" id="edit-dosage" required />
+          </div>
+          <div>
+            <label for="edit-time">Time of Intake :</label>
+            <input type="time" id="edit-time" required />
+          </div>
+          <button type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Script JS -->
+    <script src="./script.js"></script>
+  </body>
+</html>

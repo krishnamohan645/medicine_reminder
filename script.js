@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
     reminderItem.innerHTML = `
             <span class="medicine-name"><strong>Medication Name:</strong> ${medicineName}</span><br>
             <span class="dosage"><strong>Dosage:</strong> ${dosage}</span><br>
-            <span class="time-of-intake"><strong>Time of Intake:</strong> ${time}</span>
+            <span class="Alert-Timing"><strong>Alert Timing:</strong> ${time}</span>
             <button class="edit-btn">Edit</button>
             <button class="delete-btn">Delete</button>
         `;
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
         reminderItem.querySelector(".medicine-name").textContent;
       const currentDosage = reminderItem.querySelector(".dosage").textContent;
       const currentTime =
-        reminderItem.querySelector(".time-of-intake").textContent;
+        reminderItem.querySelector(".Alert-Timing").textContent;
 
       // Open the edit modal
       openEditForm(
@@ -99,47 +99,52 @@ document.addEventListener("DOMContentLoaded", function () {
     // Clear form fields
     form.reset();
   });
+// Function to open the edit form/modal
+function openEditForm(medicineName, dosage, time, reminderItem) {
+  // Assuming you have a modal with id 'editModal'
+  const editModal = document.getElementById("editModal");
 
-  // Function to open the edit form/modal
-  function openEditForm(medicineName, dosage, time, reminderItem) {
-    // Assuming you have a modal with id 'editModal'
-    const editModal = document.getElementById("editModal");
+  // Populate the form fields with the current values
+  document.getElementById("edit-medicine-name").value = medicineName;
+  document.getElementById("edit-dosage").value = dosage;
+  document.getElementById("edit-time").value = time;
 
-    // Populate the form fields with the current values
-    document.getElementById("edit-medicine-name").value = medicineName;
-    document.getElementById("edit-dosage").value = dosage;
-    document.getElementById("edit-time").value = time;
+  // Show the modal
+  editModal.style.display = "block";
 
-    // Show the modal
-    editModal.style.display = "block";
+  // Clear the input fields
+  document.getElementById("edit-medicine-name").value = "";
+  document.getElementById("edit-dosage").value = "";
+  document.getElementById("edit-time").value = "";
 
-    // Show an alert
-    alert("Edit form opened!");
+  // Show an alert
+  alert("Edit form opened!");
 
-    // Update the reminder item on save
-    const editForm = document.getElementById("edit-medication-form");
-    editForm.addEventListener("submit", function (event) {
-      event.preventDefault();
-      const newMedicineName =
-        document.getElementById("edit-medicine-name").value;
-      const newDosage = document.getElementById("edit-dosage").value;
-      const newTime = document.getElementById("edit-time").value;
-      reminderItem.querySelector(
-        ".medicine-name"
-      ).innerHTML = `<strong>Medication Name:</strong> ${newMedicineName}`;
-      reminderItem.querySelector(
-        ".dosage"
-      ).innerHTML = `<strong>Dosage:</strong> ${newDosage}`;
-      reminderItem.querySelector(
-        ".time-of-intake"
-      ).innerHTML = `<strong>Time of Intake:</strong> ${newTime}`;
+  // Update the reminder item on save
+  const editForm = document.getElementById("edit-medication-form");
+  editForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const newMedicineName =
+      document.getElementById("edit-medicine-name").value;
+    const newDosage = document.getElementById("edit-dosage").value;
+    const newTime = document.getElementById("edit-time").value;
+    reminderItem.querySelector(
+      ".medicine-name"
+    ).innerHTML = `<strong>Medication Name:</strong> ${newMedicineName}`;
+    reminderItem.querySelector(
+      ".dosage"
+    ).innerHTML = `<strong>Dosage:</strong> ${newDosage}`;
+    reminderItem.querySelector(
+      ".Alert-Timing"
+    ).innerHTML = `<strong>Time of Intake:</strong> ${newTime}`;
 
-      // Update alarm time for the reminder
-      setupAlarm(newTime, newMedicineName, newDosage);
+    // Update alarm time for the reminder
+    setupAlarm(newTime, newMedicineName, newDosage);
 
-      editModal.style.display = "none";
-    });
-  }
+    editModal.style.display = "none";
+  });
+}
+
 
   // Close the edit modal when clicking on the close button
   const closeModal = document.querySelector(".close");

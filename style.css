@@ -5,6 +5,7 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -65,7 +66,8 @@ input[type="time"] {
     border-radius: 5px;
 }
 
-button {
+/* Primary Button */
+.primary-button {
     background-color: #007bff;
     color: #fff;
     padding: 10px 20px;
@@ -74,8 +76,21 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.primary-button:hover {
     background-color: #0056b3;
+}
+
+.secondary-button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.secondary-button:hover {
+    background-color: #218838;
 }
 
 ul {
@@ -83,13 +98,11 @@ ul {
     padding: 0;
 }
 
-/* Add this CSS to your stylesheet */
 .reminder-item {
-    border-bottom: 1px solid #ccc; /* Add a border line after each list item */
+    border-bottom: 1px solid #ccc;
     margin-top: 10px;
-    padding-bottom: 10px; /* Add some padding at the bottom of each list item */
+    padding-bottom: 10px;
 }
-
 
 footer {
     text-align: center;
@@ -98,27 +111,24 @@ footer {
     color: #fff;
 }
 
-
-
-/* Add this CSS to your stylesheet */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 80%;
     border-radius: 5px;
 }
 
@@ -136,6 +146,72 @@ footer {
     cursor: pointer;
 }
 
-#edit-medication-form{
+#edit-medication-form {
     margin-right: 10px;
 }
+
+.edit-btn {
+    background-color: #28a745; 
+    color: #fff; 
+    padding: 8px 16px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin-right: 5px;
+}
+.delete-btn {
+    background-color: #dc3545; 
+    color: #fff; 
+    padding: 8px 16px; 
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+.edit-btn {
+    background-color: #28a745; 
+    color: #fff; 
+    padding: 8px 16px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin-right: 5px; 
+}
+.delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 8px 16px;
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+.input-wrapper {
+    position: relative;
+    width: 150px; 
+    height: 150px; 
+  }
+  
+  .time-input {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px; 
+    height: 100px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    background-color: #fff;
+    font-size: 16px;
+    text-align: center;
+    line-height: 100px; 
+    cursor: pointer;
+  }
+  .clock-hand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 0;
+    width: 2px; 
+    height: 50%; 
+    background-color: #333;
+  }
+  

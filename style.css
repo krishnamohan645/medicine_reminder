@@ -214,4 +214,9 @@ footer {
     height: 50%; 
     background-color: #333;
   }
-  
+  input[type="time"] {
+    width: 10%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+ }

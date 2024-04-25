@@ -215,7 +215,7 @@ footer {
     background-color: #333;
   }
   input[type="time"] {
-    width: 50%;
+    width: 30%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
